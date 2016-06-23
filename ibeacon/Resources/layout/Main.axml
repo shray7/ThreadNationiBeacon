@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="#ff5dbcd2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="Thread Nation Perks"
-        android:src="@drawable/threadnation" />
-    <TextView
-        android:id="@+id/BdTextView"
+  <ImageView
+      android:id="@+id/imageView1"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:contentDescription="Thread Nation Perks"
+      android:src="@drawable/threadnation" />
+  <TextView
+      android:id="@+id/BdTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Buffalo Wild Wings"
+      android:textColor="#000000"
+       />
+  <TextView
+        android:id="@+id/HiltonTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buffalo Wild Wings"
-        android:onClick="ShowBdInfo" />
+        android:text="Hilton Garden Inn"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp"
+        />
+  <Button
+      android:id="@+id/SendSampleNotification"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="SendSampleNotification"
+      android:onClick="SendSampleNotification" />
 </LinearLayout>

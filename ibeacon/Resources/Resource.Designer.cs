@@ -64,10 +64,13 @@ namespace ibeacon
 			public const int bww = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int hilton = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int threadnation = 2130837506;
+			public const int Icon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int threadnation = 2130837507;
 			
 			static Drawable()
 			{
@@ -85,17 +88,23 @@ namespace ibeacon
 			// aapt resource value: 0x7f080001
 			public const int BdTextView = 2131230721;
 			
-			// aapt resource value: 0x7f080004
-			public const int action_settings = 2131230724;
-			
 			// aapt resource value: 0x7f080002
-			public const int bluetoothToggleButton = 2131230722;
+			public const int HiltonTextView = 2131230722;
+			
+			// aapt resource value: 0x7f080003
+			public const int SendSampleNotification = 2131230723;
+			
+			// aapt resource value: 0x7f080006
+			public const int action_settings = 2131230726;
+			
+			// aapt resource value: 0x7f080004
+			public const int bluetoothToggleButton = 2131230724;
 			
 			// aapt resource value: 0x7f080000
 			public const int imageView1 = 2131230720;
 			
-			// aapt resource value: 0x7f080003
-			public const int notificationToggleButton = 2131230723;
+			// aapt resource value: 0x7f080005
+			public const int notificationToggleButton = 2131230725;
 			
 			static Id()
 			{
@@ -114,10 +123,13 @@ namespace ibeacon
 			public const int buffalo = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int hilton = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Settings = 2130903042;
+			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Settings = 2130903043;
 			
 			static Layout()
 			{
@@ -156,6 +168,9 @@ namespace ibeacon
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040003
+			public const int hiltonInfo = 2130968579;
 			
 			static String()
 			{

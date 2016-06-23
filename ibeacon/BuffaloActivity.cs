@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ibeacon
 {
-    [Activity(Label = "ibeacon", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "Thread Nation Perks", MainLauncher = false, Icon = "@drawable/icon")]
     public class BuffaloActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
