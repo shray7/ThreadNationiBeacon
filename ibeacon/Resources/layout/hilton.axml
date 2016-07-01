@@ -2,33 +2,42 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ff5dbcd2"
-            >
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="fill_parent"
+    android:background="#ff5dbcd2">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Thread Nation Perks"
+            android:scaleType="fitStart"
+            android:src="@drawable/threadnation" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="400px"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="Bww"
+            android:src="@drawable/hilton" />
+        <TextView
+            android:id="@+id/BdTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/hiltonInfo" />
+      <Button
+        android:id="@+id/HiltonMap"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="Thread Nation Perks"
-        android:src="@drawable/threadnation" />
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="500px"
-        android:layout_height="400px"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="Bww"
-        android:src="@drawable/hilton" />
-    <TextView
-        android:id="@+id/BdTextView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="@string/hiltonInfo" />
-  </LinearLayout>
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Show on Map"
+     />
+    </LinearLayout>
 </ScrollView>

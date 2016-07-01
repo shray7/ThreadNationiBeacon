@@ -7,6 +7,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Text.Method;
 using Android.Views;
 using Android.Widget;
 
@@ -20,9 +21,8 @@ namespace ibeacon
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.buffalo);
-
-
-
+            var bdTextView = FindViewById<TextView>(Resource.Id.BdTextView);
+            bdTextView.MovementMethod = LinkMovementMethod.Instance;
         }
     }
 }

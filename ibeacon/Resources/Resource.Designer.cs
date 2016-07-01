@@ -61,16 +61,28 @@ namespace ibeacon
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int bww = 2130837504;
+			public const int border = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int hilton = 2130837505;
+			public const int bww = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int hilton = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int threadnation = 2130837507;
+			public const int Icon = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int iconHouse = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int iconThread = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int iconThreadTitle = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int threadnation = 2130837511;
 			
 			static Drawable()
 			{
@@ -89,22 +101,52 @@ namespace ibeacon
 			public const int BdTextView = 2131230721;
 			
 			// aapt resource value: 0x7f080002
-			public const int HiltonTextView = 2131230722;
+			public const int BwwMap = 2131230722;
 			
 			// aapt resource value: 0x7f080003
-			public const int SendSampleNotification = 2131230723;
-			
-			// aapt resource value: 0x7f080006
-			public const int action_settings = 2131230726;
+			public const int HiltonMap = 2131230723;
 			
 			// aapt resource value: 0x7f080004
-			public const int bluetoothToggleButton = 2131230724;
+			public const int HiltonTextView = 2131230724;
+			
+			// aapt resource value: 0x7f080010
+			public const int action_settings = 2131230736;
+			
+			// aapt resource value: 0x7f08000a
+			public const int bluetoothToggleButton = 2131230730;
+			
+			// aapt resource value: 0x7f080006
+			public const int chkDining = 2131230726;
+			
+			// aapt resource value: 0x7f080007
+			public const int chkLodging = 2131230727;
+			
+			// aapt resource value: 0x7f080008
+			public const int chkRetail = 2131230728;
+			
+			// aapt resource value: 0x7f08000f
+			public const int continueButton = 2131230735;
 			
 			// aapt resource value: 0x7f080000
 			public const int imageView1 = 2131230720;
 			
+			// aapt resource value: 0x7f08000c
+			public const int notificationToggleButton = 2131230732;
+			
+			// aapt resource value: 0x7f080009
+			public const int tvBluetooth = 2131230729;
+			
+			// aapt resource value: 0x7f08000b
+			public const int tvNotification = 2131230731;
+			
 			// aapt resource value: 0x7f080005
-			public const int notificationToggleButton = 2131230725;
+			public const int tvTitle = 2131230725;
+			
+			// aapt resource value: 0x7f08000e
+			public const int tvTutorial = 2131230734;
+			
+			// aapt resource value: 0x7f08000d
+			public const int tvTutorialTitle = 2131230733;
 			
 			static Id()
 			{
@@ -130,6 +172,9 @@ namespace ibeacon
 			
 			// aapt resource value: 0x7f030003
 			public const int Settings = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Tutorial = 2130903044;
 			
 			static Layout()
 			{
@@ -163,14 +208,29 @@ namespace ibeacon
 			// aapt resource value: 0x7f040001
 			public const int ApplicationName = 2130968577;
 			
+			// aapt resource value: 0x7f040004
+			public const int BluetoothTitle = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int BwwInfo = 2130968581;
+			
 			// aapt resource value: 0x7f040002
-			public const int BwwInfo = 2130968578;
+			public const int CategoryTitle = 2130968578;
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
 			
 			// aapt resource value: 0x7f040003
-			public const int hiltonInfo = 2130968579;
+			public const int NotificationTitle = 2130968579;
+			
+			// aapt resource value: 0x7f040007
+			public const int Tutorial = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int TutorialTitle = 2130968584;
+			
+			// aapt resource value: 0x7f040006
+			public const int hiltonInfo = 2130968582;
 			
 			static String()
 			{
