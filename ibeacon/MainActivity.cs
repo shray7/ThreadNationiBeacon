@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Preferences;
 using EstimoteSdk;
+using Region = EstimoteSdk.Region;
 
 namespace ibeacon
 {
@@ -26,12 +29,12 @@ namespace ibeacon
         public void OnServiceReady()
         {
             isScanning = true;
-            
+
             beaconManager.StartMonitoring(DefaultRegion);
 
-            
-            beaconManager.SetRangingListener(new CustomListener());
-            beaconManager.StartRanging(DefaultRegion);
+
+            //beaconManager.SetRangingListener(new CustomListener());
+            //beaconManager.StartRanging(DefaultRegion);
 
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -53,28 +56,39 @@ namespace ibeacon
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
+            ActionBar.SetBackgroundDrawable(new ColorDrawable(new Color(0, 136, 187)));
             PreferenceManger = PreferenceManager.GetDefaultSharedPreferences(this);
 
-            if (PreferenceManger.GetBoolean("TutorialFlag", true))
+            if (!PreferenceManger.GetBoolean("TutorialFlag", true))
             {
-                SetContentView(Resource.Layout.Tutorial);
-                var bwwtextView = FindViewById<TextView>(Resource.Id.continueButton);
-                bwwtextView.Click += (sender, args) =>
-                {
-                    PreferenceManger.Edit()
-                                    .PutBoolean("TutorialFlag", false)
-                                    .Apply();
-                    BuildMainView();
-                };
-            }
-            else
                 BuildMainView();
+                return;
+            }
+
+            SetContentView(Resource.Layout.Tutorial);
+            FindViewById<TextView>(Resource.Id.continueButton).Click += (sender, args) =>
+            {
+                PreferenceManger.Edit()
+                                .PutBoolean("TutorialFlag", false)
+                                .Apply();
+                BuildMainView();
+            };
         }
 
         private void BuildMainView()
         {
             SetContentView(Resource.Layout.Main);
 
+
+            FindViewById<RelativeLayout>(Resource.Id.BwwContainer).Click += (sender, args) =>
+            {
+                StartActivity(new Intent(this, typeof (BuffaloActivity)));
+            };
+            FindViewById<RelativeLayout>(Resource.Id.HiltonContainer).Click += (sender, args) =>
+            {
+                StartActivity(new Intent(this, typeof(HiltonActivity)));
+            };
             var bwwtextView = FindViewById<TextView>(Resource.Id.BdTextView);
             bwwtextView.Text = "Buffalo Wild Wings";
             bwwtextView.LongClick += SendSampleNotification;
@@ -98,31 +112,17 @@ namespace ibeacon
             ////Connect to beacon manager to start scanning
             beaconManager.Connect(this);
             beaconManager.EnteredRegion += BeaconManager_EnteredRegion;
-            beaconManager.ExitedRegion += BeaconManager_ExitedRegion;
         }
 
-        private void BeaconManager_ExitedRegion(object sender, BeaconManager.ExitedRegionEventArgs e)
-        {
 
-            if (e.Region.Major == 43790)
-            {
-                var textView = FindViewById<TextView>(Resource.Id.HiltonTextView);
-                textView.Text = "Hilton Garden Inn";
-            }
-
-            if (e.Region.Major == 35710)
-            {
-                var textView = FindViewById<TextView>(Resource.Id.BdTextView);
-                textView.Text = "Buffalo Wild Wings";
-            }
-        }
         private void BeaconManager_EnteredRegion(object sender, BeaconManager.EnteredRegionEventArgs e)
         {
             var hiltonBeacon = e.Beacons.FirstOrDefault(x => x.Major == 43790);
             if (hiltonBeacon != null)
             {
                 var textView = FindViewById<TextView>(Resource.Id.HiltonTextView);
-                textView.Text = "Hilton Garden Inn :" + Math.Round(Utils.ComputeAccuracy(hiltonBeacon), 2) + " m";
+                textView.SetTypeface(null, TypefaceStyle.Bold);
+                textView.Text = "Hilton Garden Inn : " + Math.Round(Utils.ComputeAccuracy(hiltonBeacon) * 3.3, 2) + " ft";
                 BuildHiltonNotification();
             }
 
@@ -130,7 +130,8 @@ namespace ibeacon
             if (bwwBeacon != null)
             {
                 var textView = FindViewById<TextView>(Resource.Id.BdTextView);
-                textView.Text = "Buffalo Wild Wings :" + Math.Round(Utils.ComputeAccuracy(bwwBeacon), 2) + " m";
+                textView.SetTypeface(null, TypefaceStyle.Bold);
+                textView.Text = "Buffalo Wild Wings : " + Math.Round(Utils.ComputeAccuracy(bwwBeacon) * 3.3, 2) + " ft";
                 BuildBwwnotification();
             }
 
@@ -173,6 +174,20 @@ namespace ibeacon
             var notificationManager =
                 GetSystemService(NotificationService) as NotificationManager;
 
+            if (notificationId == 0)
+            {
+                Intent wingsNotificationIntent = new Intent(this, typeof(BuffaloActivity));
+                PendingIntent pendingIntentBuffalo = PendingIntent.GetActivity(this, 0, wingsNotificationIntent, 0);
+                builder.SetContentIntent(pendingIntentBuffalo);
+                notification.SetLatestEventInfo(this, title, text, pendingIntentBuffalo);
+            }
+            if (notificationId == 1)
+            {
+                Intent hiltonNotificationIntent = new Intent(this, typeof(HiltonActivity));
+                PendingIntent pendingIntentHilton = PendingIntent.GetActivity(this, 0, hiltonNotificationIntent, 0);
+                builder.SetContentIntent(pendingIntentHilton);
+                notification.SetLatestEventInfo(this, title, text, pendingIntentHilton);
+            }
             // Publish the notification:
             var prefs = PreferenceManager.GetDefaultSharedPreferences(this);
             if (notificationManager != null && prefs.GetBoolean("Notification", true)) notificationManager.Notify(notificationId, notification);
@@ -195,7 +210,7 @@ namespace ibeacon
         }
     }
 
-    public class CustomListener: BeaconManager.IRangingListener
+    public class CustomListener : BeaconManager.IRangingListener
     {
         public IList<Beacon> Beacons;
         public void Dispose()

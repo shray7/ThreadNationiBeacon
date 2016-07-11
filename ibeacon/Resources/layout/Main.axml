@@ -1,27 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#ff5dbcd2"
+    android:background="#0088BB"
     android:layout_width="match_parent"
     android:layout_height="fill_parent">
-  <ImageView
-      android:id="@+id/imageView1"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentTop="true"
-      android:contentDescription="Thread Nation Perks"
-      android:scaleType="fitStart"
-      android:src="@drawable/threadnation" />
-  <TextView
-      android:id="@+id/BdTextView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textColor="#000000" />
-  <TextView
-      android:id="@+id/HiltonTextView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textColor="#000000"
-      android:layout_marginTop="20dp" />
+  <RelativeLayout
+    android:id="@+id/BwwContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    
+    android:padding="5dp"
+    >
+    <ImageView
+      android:id="@+id/bicon"
+      android:layout_width="300px"
+      android:layout_height="300px"
+      android:contentDescription="Bww"
+      android:src="@drawable/bicon" />
+    <TextView
+        android:id="@+id/BdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bicon"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/BdDescTextView"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bicon"
+        android:textSize="17sp"
+        android:layout_below="@+id/BdTextView"
+        android:text="@string/BwwDesc"
+        android:textColor="#000000" />
+  </RelativeLayout>
+  <RelativeLayout
+  android:id="@+id/HiltonContainer"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#FFFFFF"
+  android:paddingTop="5dp"
+  android:paddingBottom="5dp"
+  android:layout_marginTop="5dp"
+    >
+    <ImageView
+      android:id="@+id/hilton"
+      android:layout_width="300px"
+      android:layout_height="300px"
+      android:contentDescription="Bww"
+      android:src="@drawable/hilton" />
+    <TextView
+        android:id="@+id/HiltonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hilton"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/HiltonDescTextView"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hilton"
+        android:textSize="17sp"
+        android:layout_below="@+id/HiltonTextView"
+        android:text="@string/HiltonDesc"
+        android:textColor="#000000" />
+  </RelativeLayout>
 </LinearLayout>

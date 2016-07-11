@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">ibeacon</string>
-  <string name="CategoryTitle"><u>Categories</u></string>
-  <string name="NotificationTitle"><u>Notifications</u></string>
-  <string name="BluetoothTitle"><u>Bluetooth</u></string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">ibeacon</string>
+  <string name="CategoryTitle">
+    <u>Categories</u>
+  </string>
+  <string name="NotificationTitle">
+    <u>Notifications</u>
+  </string>
+  <string name="BluetoothTitle">
+    <u>Bluetooth</u>
+  </string>
+
+  <string name="bwwmap">
+    <a href="https://goo.gl/NkVEao">Show On Map</a>
+  </string>
   <string name="BwwInfo">
     Buffalo Wild Wings is the place to go for wings, beer, and sports ! Buffalo Wild Wings is the ultimate place to get together with your friends, watch sports, drink beer and eat wings. \n\nTheir menu features appetizers, burgers, sandwiches, wraps, salads and more! They also have 16 signature sauces to try, from mild, Salt and Vinegar to Blazin Hot ! Click <a href="http://www.buffalowildwings.com/en/menu/">here</a> to view their menu. \n\nBuffalo Wild Wings is proud to offer all Quicken Loans and Rock Ventures family of companies team members 15% off their entire food purchase (dine-in only) ALL day, every Monday with ID Badge! \n\n
-  Buffalo Wild Wings \n
-  1218 Randolph Street \n
-  Detroit, MI 48226"
-</string>
+    Buffalo Wild Wings \n
+    1218 Randolph Street \n
+    Detroit, MI 48226"
+  </string>
+  <string name="BwwDesc">15% off their entire food purchase (dine-in only) ALL day, Every Monday with ID badge</string>
   <string name="hiltonInfo">
     <b>Hilton Garden Inn</b> Detroit Downtown hotel, located in downtown Detroit. Set in the heart of Harmonie Park, the hotel is surrounded by shops, restaurants and entertainment venues such as Ford Field and Comerica Park. Local businesses and corporate offices within walking distance to our hotel in Detroit, Michigan include Quicken Loans, Ernst and Young, PricewaterhouseCoopers and One Campus Martius. \n\n <b>Hilton Garden Inn</b> is happy to provide all team members of Quicken Loans and Rock Ventures family of companies team members a premier discount. \n\n <b>Quicken Loans discounted rate</b> includes:
--Free Internet \n
-To receive this fabulous discount, call <b>313.967.0900 and request the Quicken Loans rate.</b> You will still be responsible for parking ($22 per night, per vehicle). \n\n
-<b>***IMPORTANT*** \n
-Team members are only allowed to book 2 rooms per visit and you MUST present your photo ID badge when checking-in.</b>
+    -Free Internet \n
+    To receive this fabulous discount, call <b>313.967.0900 and request the Quicken Loans rate.</b> You will still be responsible for parking ($22 per night, per vehicle). \n\n
+    <b>
+      ***IMPORTANT*** \n
+      Team members are only allowed to book 2 rooms per visit and you MUST present your photo ID badge when checking-in.
+    </b>
   </string>
+  <string name="HiltonDesc">Quicken Loans and Rock Ventures family of companies team members a premier discount</string>
   <string name="Tutorial">
-      As a team member using this app, we make it incredibly easy to find out which of your favorite restaurants/bars, retail outlets and hotels offer discounts to our Family of Companies! \n\n Please select the categories you have interest in seeing and turn on Bluetooth to get started! \n\n <u>How It Works</u> \n\n Once you turn on your Bluetooth, you will be eligible to receive notifications from the business who offer the Family of Companies discounts. If you walk within 100M of a business offering a discount, your phone will be sent a notification with the details of the discount. It’s that simple! 
+    As a team member using this app, we make it incredibly easy to find out which of your favorite restaurants/bars, retail outlets and hotels offer discounts to our Family of Companies! \n\n Please select the categories you have interest in seeing and turn on Bluetooth to get started! \n\n <u>How It Works</u> \n\n Once you turn on your Bluetooth, you will be eligible to receive notifications from the business who offer the Family of Companies discounts. If you walk within 100M of a business offering a discount, your phone will be sent a notification with the details of the discount. It’s that simple! 
   </string>
-  <string name="TutorialTitle">Welcome to Thread Nation Perks!</string></resources>
+  <string name="TutorialTitle">Welcome to Thread Nation Perks!</string>
+</resources>

@@ -8,7 +8,7 @@ using Android.Widget;
 
 namespace ibeacon
 {
-    [Activity(Label = "Thread Nation Perks", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "Thread Nation Perks", MainLauncher = false, Icon = "@drawable/iconThread")]
     public class SettingsActivity : Activity
     {
         public BluetoothAdapter DeviceBluetoothAdapter { get; }
