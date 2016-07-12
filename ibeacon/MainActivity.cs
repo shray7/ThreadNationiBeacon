@@ -29,13 +29,7 @@ namespace ibeacon
         public void OnServiceReady()
         {
             isScanning = true;
-
             beaconManager.StartMonitoring(DefaultRegion);
-
-
-            //beaconManager.SetRangingListener(new CustomListener());
-            //beaconManager.StartRanging(DefaultRegion);
-
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -49,7 +43,9 @@ namespace ibeacon
                 case Resource.Id.action_settings:
                     StartActivity(new Intent(this, typeof(SettingsActivity)));
                     return true;
-
+                case Resource.Id.tutorial:
+                    StartActivity(new Intent(this, typeof(TutorialActivity)));
+                    return true;
             }
             return base.OnOptionsItemSelected(item);
         }
@@ -165,6 +161,7 @@ namespace ibeacon
                 .SetContentText(text)
                 .SetSmallIcon(Resource.Drawable.iconThread)
                 .SetVibrate(new long[] { 1000, 1000 })
+                .SetAutoCancel(true)
                 ;
 
             // Build the notification:

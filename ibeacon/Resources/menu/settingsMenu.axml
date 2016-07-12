@@ -6,4 +6,9 @@
       android:background="@drawable/threadnation"
       android:title="Settings"
        />
+  <item
+    android:id="@+id/tutorial"
+      android:background="@drawable/threadnation"
+      android:title="Tutorial"
+    />
 </menu>
